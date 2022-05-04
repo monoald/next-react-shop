@@ -10,24 +10,24 @@ const MyOrder = () => {
 	const { state: {cart} } = useContext(AppContext);
 	
 	return (
-		<aside className={`MyOrder ${styles.MyOrder}`}>
-			<div className="MyOrder__title-container">
-				<img className='MyOrder__close' src={flechita} alt="arrow" />
-				<p className="title">My order</p>
+		<aside className={styles.MyOrder}>
+			<div className={styles['MyOrder__title-container']}>
+				<img className={styles.MyOrder__close} src={flechita} alt="arrow" />
+				<p className={styles.title}>My order</p>
 			</div>
-			<div className="MyOrder__content">
+			<div className={styles.MyOrder__content}>
 				{cart.map( ( product, index ) => (
 					<OrderItem indexValue={index} product={product} key={index} />
 				))}
 			</div>
-			<div className="order">
+			<div className={styles.order}>
 				<p>
-					<span className='order__title'>Total</span>
+					<span className={styles.order__title}>Total</span>
 				</p>
-				<p className='order__total'>$ {sumTotal(cart)}</p>
+				<p className={styles.order__total}>$ {sumTotal(cart)}</p>
 			</div>
 			<Link to='/checkout' >
-				<button className="primary-button">
+				<button className={styles.primary-button}>
 						Checkout
 				</button>
 			</Link>

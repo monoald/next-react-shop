@@ -20,17 +20,17 @@ const ProductItem = ({ product }) => {
 	}
 
 	return (
-		<div className={`ProductItem ${styles.ProductItem}`}>
-			<img onClick={() => handleProduct(product)} className='ProductItem__image' src={product.images[0]} alt={product.title} />
-			<div className="ProductItem__info">
+		<div className={styles.ProductItem}>
+			<img onClick={() => handleProduct(product)} className={styles.ProductItem__image} src={product.images[0]} alt={product.title} />
+			<div className={styles.ProductItem__info}>
 				<div>
-					<p className='ProductItem__price'>$ {product.price}</p>
-					<p className='ProductItem__name'>{product.title}</p>
+					<p className={styles.ProductItem__price}>$ {product.price}</p>
+					<p className={styles.ProductItem__name}>{product.title}</p>
 				</div>
-				<figure className='ProductItem__add-to-cart' onClick={() => handleCart(product)}>
+				<figure className={styles['ProductItem__add-to-cart']} onClick={() => handleCart(product)}>
 					{ isProductAdded()
-					? (	<img className='ProduProductItem__icon' src={removefromCartImage} alt="" /> ) 
-					: ( <img className='ProduProductItem__icon' src={addToCartImage} alt="" /> )
+					? (	<img className={styles.ProduProductItem__icon} src={removefromCartImage} alt="" /> ) 
+					: ( <img className={styles.ProduProductItem__icon} src={addToCartImage} alt="" /> )
 					}
 				</figure>
 			</div>

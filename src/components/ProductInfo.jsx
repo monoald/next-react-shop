@@ -5,21 +5,21 @@ import AppContext from 'context/AppContext';
 import styles from 'styles/ProductInfo.module.scss';
 
 const ProductInfo = ({ product }) => {
-	const { state: {actualProduct} } = useContext(AppContext)
+	
 	const { removeProduct } = useContext(AppContext);
 
 	return (
-		<section className={`ProductInfo ${styles.ProductInfo}`}>
-			<div className='ProductInfo__container'>
-				<div onClick={removeProduct} className='ProductInfo__close'>
-					<img className='ProductInfo__icon' src={closeIcon} alt="close product" />
+		<section className={styles.ProductInfo}>
+			<div className={styles.ProductInfo__container}>
+				<div onClick={removeProduct} className={styles.ProductInfo__close}>
+					<img className={styles.ProductInfo__icon} src={closeIcon} alt="close product" />
 				</div>
-				<img className='ProductInfo__image' src={product.images[0]} alt={product.title} />
-				<div className="ProductInfo__text">
-					<p className='ProductInfo__price'>$ {product.price}</p>
-					<p className='ProductInfo__name'>{product.title}</p>
-					<p className='ProductInfo__description'>{product.description}</p>
-					<button className="ProductInfo__button add-to-cart-button">
+				<img className={styles.ProductInfo__image} src={product.images[0]} alt={product.title} />
+				<div className={styles.ProductInfo__text}>
+					<p className={styles.ProductInfo__price}>$ {product.price}</p>
+					<p className={styles.ProductInfo__name}>{product.title}</p>
+					<p className={styles.ProductInfo__description}>{product.description}</p>
+					<button className={`${styles.ProductInfo__button} ${styles.add-to-cart-button}`}>
 						<img src={addToCart} alt="add to cart" />
 						Add to cart
 					</button>

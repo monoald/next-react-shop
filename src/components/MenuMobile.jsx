@@ -11,47 +11,47 @@ const MenuMobile = () => {
 
   if (toggle) {
     return (
-      <div className={`MobileMenu ${styles.MobileMenu}`}>
-        <figure onClick={() => handleToggle(setToggle, toggle)} className='MobileMenu__close'>
-          <img className='MobileMenu__image' src={closeIcon} alt="Close menu" />
+      <div className={styles.MobileMenu}>
+        <figure onClick={() => handleToggle(setToggle, toggle)} className={styles.MobileMenu__close}>
+          <img className={styles.MobileMenu__image} src={closeIcon} alt="Close menu" />
         </figure>
-        <ul className="MobileMenu__categories list">
-          <li className="list__item">
-            <a className="list__link" href="/">CATEGORIES</a>
+        <ul className={`${styles.MobileMenu__categories} ${styles.list}`}>
+          <li className={styles.list__item}>
+            <a className={styles.list__link} href="/">CATEGORIES</a>
           </li>
-          <li className="list__item">
-            <a className="list__link" href="/">All</a>
+          <li className={styles.list__item}>
+            <a className={styles.list__link} href="/">All</a>
           </li>
-          <li className="list__item">
-            <a className="list__link" href="/">Clothes</a>
+          <li className={styles.list__item}>
+            <a className={styles.list__link} href="/">Clothes</a>
           </li>
-          <li className="list__item">
-            <a className="list__link" href="/">Electronics</a>
+          <li className={styles.list__item}>
+            <a className={styles.list__link} href="/">Electronics</a>
           </li>
-          <li className="list__item">
-            <a className="list__link" href="/">Furnitures</a>
+          <li className={styles.list__item}>
+            <a className={styles.list__link} href="/">Furnitures</a>
           </li>
-          <li className="list__item">
-            <a className="list__link" href="/">Toys</a>
+          <li className={styles.list__item}>
+            <a className={styles.list__link} href="/">Toys</a>
           </li>
-          <li className="list__item">
-            <a className="list__link" href="/">Others</a>
-          </li>
-        </ul>
-        <ul className="MobileMenu__account list">
-          <li className="list__item">
-            <a className="list__link" href="/">My orders</a>
-          </li>
-          <li className="list__item">
-            <a className="list__link" href="/">My account</a>
+          <li className={styles.list__item}>
+            <a className={styles.list__link} href="/">Others</a>
           </li>
         </ul>
-        <ul className="MobileMenu__info list">
-          <li className="list__item">
-            <a className="list__link email" href="/" >Calos.aldazosa@outlook.com</a>
+        <ul className={`${styles.MobileMenu__account} ${styles.list}`}>
+          <li className={styles.list__item}>
+            <a className={styles.list__link} href="/">My orders</a>
           </li>
-          <li className="list__item">
-            <a className="list__link sign-out" href="/" >Sign out</a>
+          <li className={styles.list__item}>
+            <a className={styles.list__link} href="/">My account</a>
+          </li>
+        </ul>
+        <ul className={`${styles.MobileMenu__info} ${styles.list}`}>
+          <li className={styles.list__item}>
+            <a className={`${styles.list__link} ${styles.email}`} href="/" >Calos.aldazosa@outlook.com</a>
+          </li>
+          <li className={styles.list__item}>
+            <a className={`${styles.list__link} ${styles.sign-out}`} href="/" >Sign out</a>
           </li>
         </ul>
       </div>

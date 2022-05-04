@@ -15,20 +15,20 @@ const Login = () => {
     console.log(data);
   }
   return (
-    <div className={`Login ${styles.Login}`}>
-			<div className="Login__container">
-				<img src={logo} alt="logo" className="Login__logo" />
-				<form action="/" className="form" ref={form}>
-					<label htmlFor="email" className="Login__label">Email address</label>
-					<input type="text" name="email" placeholder="platzi@example.cm" className="Login__input input-email" />
-					<label htmlFor="password" className="Login__label">Password</label>
-					<input type="password" name="password" placeholder="*********" className="Login__input input-password" />
-					<button onClick={handleSubmit} className="primary-button Login__button">
+    <div className={styles.Login}>
+			<div className={styles.Login__container}>
+				<img src={logo} alt="logo" className={styles.Login__logo} />
+				<form action="/" className={styles.form} ref={form}>
+					<label htmlFor="email" className={styles.Login__label}>Email address</label>
+					<input type="text" name="email" placeholder="platzi@example.cm" className={`${styles.Login__input} ${styles['input-email']}`} />
+					<label htmlFor="password" className={styles.Login__label}>Password</label>
+					<input type="password" name="password" placeholder="*********" className={`${styles.Login__input} ${styles['input-password']}`} />
+					<button onClick={handleSubmit} className={`${styles['primary-button']} ${styles.Login__button}`}>
             Log in
 					</button>
-					<a className='form__forgot-pswd' href="/">Forgot my password</a>
+					<a className={styles['form__forgot-pswd']} href="/">Forgot my password</a>
 				</form>
-				<button className="secondary-button signup-button">
+				<button className={`${styles['secondary-button']} ${styles['signup-button']}`}>
 					Sign up
 				</button>
 			</div>

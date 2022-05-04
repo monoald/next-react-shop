@@ -12,9 +12,9 @@ const ProductList = () => {
 	const { state: {actualProduct} } = useContext(AppContext);
 
 	return (
-		<section className={`main-container ${styles.main-container}`}>
+		<section className={styles.main-container}>
 			{actualProduct && <ProductInfo product={actualProduct} />}
-			<div className="ProductList">
+			<div className={styles.ProductList}>
 				{products.map(product => {
 					if (product.id !== 8) {
 						return <ProductItem product={product} key={product.id} />

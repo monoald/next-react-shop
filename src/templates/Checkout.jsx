@@ -9,19 +9,19 @@ const Checkout = () => {
 	const { state: {cart} } = useContext(AppContext);
 
 	return (
-		<div className={`Checkout ${styles.Checkout}`}>
-			<div className="Checkout__container">
-				<h1 className="Checkout__title">My order</h1>
-				<div className="Checkout__content">
+		<div className={styles.Checkout}>
+			<div className={styles.Checkout__container}>
+				<h1 className={styles.Checkout__title}>My order</h1>
+				<div className={styles.Checkout__content}>
 						{cart.map( ( product, index ) => (
 							<OrderItem indexValue={index} product={product} key={index} />
 						))}
-					<div className="order">
-						<p className='order__info'>
-							<span className='order__date'>{date.getDate()}.{date.getMonth()}.{date.getFullYear()}</span>
-							<span className='order__quantity'>{cart.length} articles</span>
+					<div className={styles.order}>
+						<p className={styles.order__info}>
+							<span className={styles.order__date}>{date.getDate()}.{date.getMonth()}.{date.getFullYear()}</span>
+							<span className={styles.order__quantity}>{cart.length} articles</span>
 						</p>
-						<p className='order__total'>$ {sumTotal(cart)}</p>
+						<p className={styles.order__total}>$ {sumTotal(cart)}</p>
 					</div>
 				</div>
 			</div>

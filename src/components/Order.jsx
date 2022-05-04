@@ -3,7 +3,7 @@ import styles from 'styles/Order.module.scss';
 
 const Order = () => {
 	return (
-		<div className={`Order ${styles.Order}`}>
+		<div className={styles.Order}>
 			<p>
 				<span>03.25.21</span>
 				<span>6 articles</span>

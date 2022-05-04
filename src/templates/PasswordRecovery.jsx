@@ -4,18 +4,18 @@ import styles from 'styles/PasswordRecovery.module.scss';
 
 const RecoveryPassword = () => {
   return (
-    <div className={`PasswdRecovery ${styles.PasswdRecovery}`}>
-      <div className="PasswdRecovery__form">
-        <img src={logo} alt="logo" className="PasswdRecovery__logo" />
-        <h1 className="PasswdRecovery__title">Email has been sent!</h1>
-        <p className="PasswdRecovery__subtitle">Please check your inbox for instructions on how to reset the password</p>
-        <div className="PasswdRecovery__email-image">
-          <img className='icon' src={emailIcon} alt="email" />
+    <div className={styles.PasswdRecovery}>
+      <div className={styles.PasswdRecovery__form}>
+        <img src={logo} alt="logo" className={styles.PasswdRecovery__logo} />
+        <h1 className={styles.PasswdRecovery__title}>Email has been sent!</h1>
+        <p className={styles.PasswdRecovery__subtitle}>Please check your inbox for instructions on how to reset the password</p>
+        <div className={styles['PasswdRecovery__email-image']}>
+          <img className={styles.icon} src={emailIcon} alt="email" />
         </div>
-        <button className="primary-button">Back</button>
-        <p className="resend">
-          <span className='resend__text'>Didn't receive the email?</span>
-          <a className='resend__link' href="/">Resend</a>
+        <button className={styles['primary-button']}>Back</button>
+        <p className={styles.resend}>
+          <span className={styles.resend__text}>Didn't receive the email?</span>
+          <a className={styles.resend__link} href="/">Resend</a>
         </p>
       </div>
     </div>

@@ -12,13 +12,13 @@ const OrderItem = ( props ) => {
 	}
 
 	return (
-		<div className={`OrderItem ${styles.OrderItem}`}>
-			<figure className='OrderItem__img-container'>
-				<img className='OrderItem__icon' src={product.images[0]} alt={product.title} />
+		<div className={styles.OrderItem}>
+			<figure className={styles['OrderItem__img-container']}>
+				<img className={styles.OrderItem__icon} src={product.images[0]} alt={product.title} />
 			</figure>
-			<p className='OrderItem__title'>{product.title}</p>
-			<p className='OrderItem__price'>$ {product.price}</p>
-			<img className='OrderItem__close' src={closeIcon} alt="close" onClick={() => handleRemove(indexValue)} />
+			<p className={styles.OrderItem__title}>{product.title}</p>
+			<p className={styles.OrderItem__price}>$ {product.price}</p>
+			<img className={styles.OrderItem__close} src={closeIcon} alt="close" onClick={() => handleRemove(indexValue)} />
 		</div>
 	);
 }

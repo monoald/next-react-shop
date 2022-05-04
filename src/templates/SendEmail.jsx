@@ -5,15 +5,15 @@ import styles from 'styles/SendEmail.module.scss';
 const SendEmail = () => {
 	return (
 		<div className={`SendEmail ${styles.SendEmail}`}>
-			<div className="form-container">
-				<img src={logo} alt="logo" className="logo" />
-				<h1 className="title">Email has been sent!</h1>
-				<p className="subtitle">Please check your inbox for instructions on how to reset the password</p>
-				<div className="email-image">
+			<div className={styles.form-container}>
+				<img src={logo} alt="logo" className={styles.logo} />
+				<h1 className={styles.title}>Email has been sent!</h1>
+				<p className={styles.subtitle}>Please check your inbox for instructions on how to reset the password</p>
+				<div className={styles['email-image']}>
 					<img src={email} alt="email" />
 				</div>
-				<button className="primary-button login-button">Login</button>
-				<p className="resend">
+				<button className={`${styles['primary-button']} ${styles['login-button']}`}>Login</button>
+				<p className={styles.resend}>
 					<span>Didn't receive the email?</span>
 					<a href="/">Resend</a>
 				</p>
