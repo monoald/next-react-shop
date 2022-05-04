@@ -1,0 +1,47 @@
+@use 'vars' as *;
+
+.ProductItem {
+	width: 240px;
+}
+.ProductItem__image {
+	width: 240px;
+	height: 240px;
+	border-radius: 20px;
+	object-fit: cover;
+	cursor: pointer;
+}
+.ProductItem__info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 12px;
+}
+.ProductItem__add-to-cart {
+	margin: 0;
+	cursor: pointer;
+}
+.ProduProductItem__icon {
+	width: 35px;
+	height: 35px;
+}
+.ProductItem__price {
+	font-weight: bold;
+	font-size: $md;
+	margin-top: 0;
+	margin-bottom: 4px;
+}
+.ProductItem__name {
+	font-size: $sm;
+	margin-top: 0;
+	margin-bottom: 0;
+	color: $very-light-pink;
+}
+@media (max-width: 640px) {
+	.ProductItem {
+		width: 140px;
+	}
+	.ProductItem__image {
+		width: 140px;
+		height: 140px;
+	}
+}

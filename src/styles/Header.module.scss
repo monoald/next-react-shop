@@ -1,0 +1,100 @@
+@use 'vars' as *;
+
+//-----------------------------------HEADER------------------------------------------
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 28px;
+  height: 60px;
+  border-bottom: 1px solid $very-light-pink;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+.Header__logo {
+  width: 150px;
+}
+.Header__navbar {
+  height: 100%;
+}
+.Header__navbar .list{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Header__navbar .list__item {
+  text-decoration: none;
+  color: $very-light-pink;
+  border: 1px solid $white;
+  padding: 8px;
+  border-radius: 12px;
+}
+.Header__navbar .list__item:hover {
+  border: 1px solid $hospital-green;
+  color: $hospital-green;
+}
+.menu {
+  display: none;
+}
+
+//-------------NAVBAR-LEFT----------
+.navbar-left {
+  display: flex;
+  font-size: $md;
+  gap: 28px;
+}
+//------------NAVBAR-RIGTH-----------
+.navbar-right {
+  width: 200px;
+}
+.navbar-right .list{
+  display: flex;
+  justify-content: space-between;
+}
+.list__email {
+  color: $black;
+  font-size: $sm;
+  cursor: pointer;
+}
+.shopping-cart {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  cursor: pointer;
+}
+.shopping-cart__icon{
+  width: 100%;
+  object-fit: cover;
+}
+.shopping-cart__quantity{
+  width: 16px;
+  height: 16px;
+  background-color: $hospital-green;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+@media (max-width: 640px) {
+  .Header {
+      padding: 0 28px;
+  }
+  .menu {
+      display: block;
+      cursor: pointer;
+  }
+  .navbar-left .list {
+      display: none;
+  }
+  .navbar-right {
+    width: auto;
+  }
+  .list__email {
+      display: none;
+  }
+}

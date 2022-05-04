@@ -1,0 +1,24 @@
+@use 'vars' as *;
+
+.OrderItem {
+	display: grid;
+	grid-template-columns: auto 1fr auto auto;
+	gap: 16px;
+	align-items: center;
+}
+.OrderItem__img-container{
+	margin: 0;
+}
+.OrderItem__icon {
+	width: 70px;
+	height: 70px;
+	border-radius: 20px;
+	object-fit: cover;
+}
+.OrderItem__title {
+	color: $very-light-pink;
+}
+.OrderItem__price {
+	font-size: $md;
+	font-weight: bold;
+}

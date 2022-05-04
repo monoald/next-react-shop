@@ -1,0 +1,40 @@
+@use 'vars' as *;
+
+.Menu {
+	width: 160px;
+	height: auto;
+	max-height: 180px;
+	border: 1px solid $very-light-pink;
+	border-radius: 6px;
+	padding: 20px;
+	position: absolute;
+	top: 60px;
+	right: 80px;
+	background-color: white;
+}
+.Menu__list {
+	height: 100%;
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+}
+.list-item {
+	text-align: end;
+	font-weight: bold;
+}
+.sign-out {
+	padding-top: 20px;
+	border-top: 1px solid $very-light-pink;
+}
+.sign-out__text {
+	color: $hospital-green;
+	font-size: $sm;
+	text-decoration: none;
+}
+.list-item__element {
+	color: $black;
+	font-size: $sm;
+	text-decoration: none;
+	display: inline-block;
+}

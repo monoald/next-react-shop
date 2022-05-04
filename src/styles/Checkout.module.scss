@@ -1,0 +1,49 @@
+@use 'vars' as *;
+
+.Checkout {
+	width: 100%;
+	height: 100vh;
+	display: grid;
+	place-items: center;
+}
+.Checkout__title {
+	font-size: $lg;
+	height: 66px;
+	padding: 12px 0;
+}
+.Checkout__container {
+	width: 300px;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+}
+.Checkout__content {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+.Checkout__content .order {
+	height: 48px;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 16px;
+	align-items: center;
+	background-color: $text-input-field;
+	border-radius: 8px;
+	padding: 0 24px;
+}
+.Checkout__content .order__info {
+	display: flex;
+	flex-direction: column;
+}
+.Checkout__content .order__date {
+	font-size: $md;
+	font-weight: bold;
+}
+.Checkout__content .order__quantity {
+	font-size: $sm;
+	color: $very-light-pink;
+}
+.Checkout__content .order__total {
+	text-align: end;
+	font-weight: bold;
+}
