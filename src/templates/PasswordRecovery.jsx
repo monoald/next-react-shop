@@ -1,3 +1,5 @@
+
+import Image from 'next/image';
 import logo from '@logos/logo_yard_sale.svg';
 import emailIcon from '@icons/email.svg';
 import styles from 'styles/PasswordRecovery.module.scss';
@@ -6,11 +8,11 @@ const RecoveryPassword = () => {
   return (
     <div className={styles.PasswdRecovery}>
       <div className={styles.PasswdRecovery__form}>
-        <img src={logo} alt="logo" className={styles.PasswdRecovery__logo} />
+        <Image src={logo} alt="logo" className={styles.PasswdRecovery__logo} />
         <h1 className={styles.PasswdRecovery__title}>Email has been sent!</h1>
         <p className={styles.PasswdRecovery__subtitle}>Please check your inbox for instructions on how to reset the password</p>
         <div className={styles['PasswdRecovery__email-image']}>
-          <img className={styles.icon} src={emailIcon} alt="email" />
+          <Image className={styles.icon} src={emailIcon} alt="email" />
         </div>
         <button className={styles['primary-button']}>Back</button>
         <p className={styles.resend}>

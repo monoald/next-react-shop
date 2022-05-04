@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Image from 'next/image';
 import closeIcon from '@icons/icon_close.png'
 import styles from 'styles/MenuMobile.module.scss'
 
@@ -13,7 +14,7 @@ const MenuMobile = () => {
     return (
       <div className={styles.MobileMenu}>
         <figure onClick={() => handleToggle(setToggle, toggle)} className={styles.MobileMenu__close}>
-          <img className={styles.MobileMenu__image} src={closeIcon} alt="Close menu" />
+          <Image className={styles.MobileMenu__image} src={closeIcon} alt="Close menu" />
         </figure>
         <ul className={`${styles.MobileMenu__categories} ${styles.list}`}>
           <li className={styles.list__item}>

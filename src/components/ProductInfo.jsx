@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import Image from 'next/image';
 import addToCart from  '@icons/bt_add_to_cart.svg';
 import closeIcon from  '@icons/icon_close.png';
 import AppContext from 'context/AppContext';
@@ -12,15 +13,15 @@ const ProductInfo = ({ product }) => {
 		<section className={styles.ProductInfo}>
 			<div className={styles.ProductInfo__container}>
 				<div onClick={removeProduct} className={styles.ProductInfo__close}>
-					<img className={styles.ProductInfo__icon} src={closeIcon} alt="close product" />
+					<Image className={styles.ProductInfo__icon} src={closeIcon} alt="close product" />
 				</div>
-				<img className={styles.ProductInfo__image} src={product.images[0]} alt={product.title} />
+				<Image className={styles.ProductInfo__image} src={product.images[0]} alt={product.title} />
 				<div className={styles.ProductInfo__text}>
 					<p className={styles.ProductInfo__price}>$ {product.price}</p>
 					<p className={styles.ProductInfo__name}>{product.title}</p>
 					<p className={styles.ProductInfo__description}>{product.description}</p>
 					<button className={`${styles.ProductInfo__button} ${styles.add-to-cart-button}`}>
-						<img src={addToCart} alt="add to cart" />
+						<Image src={addToCart} alt="add to cart" />
 						Add to cart
 					</button>
 				</div>

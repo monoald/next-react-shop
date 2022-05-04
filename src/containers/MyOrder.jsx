@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import flechita from '@icons/flechita.svg';
@@ -12,7 +13,7 @@ const MyOrder = () => {
 	return (
 		<aside className={styles.MyOrder}>
 			<div className={styles['MyOrder__title-container']}>
-				<img className={styles.MyOrder__close} src={flechita} alt="arrow" />
+				<Image className={styles.MyOrder__close} src={flechita} alt="arrow" />
 				<p className={styles.title}>My order</p>
 			</div>
 			<div className={styles.MyOrder__content}>

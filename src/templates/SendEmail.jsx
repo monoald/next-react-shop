@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import logo from '@logos/logo_yard_sale.svg';
 import email from '@icons/email.svg';
 import styles from 'styles/SendEmail.module.scss';
@@ -6,11 +7,11 @@ const SendEmail = () => {
 	return (
 		<div className={`SendEmail ${styles.SendEmail}`}>
 			<div className={styles.form-container}>
-				<img src={logo} alt="logo" className={styles.logo} />
+				<Image src={logo} alt="logo" className={styles.logo} />
 				<h1 className={styles.title}>Email has been sent!</h1>
 				<p className={styles.subtitle}>Please check your inbox for instructions on how to reset the password</p>
 				<div className={styles['email-image']}>
-					<img src={email} alt="email" />
+					<Image src={email} alt="email" />
 				</div>
 				<button className={`${styles['primary-button']} ${styles['login-button']}`}>Login</button>
 				<p className={styles.resend}>

@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import Image from 'next/image';
 import logo from '@logos/logo_yard_sale.svg';
 import styles from 'styles/Login.module.scss'
 
@@ -17,7 +18,7 @@ const Login = () => {
   return (
     <div className={styles.Login}>
 			<div className={styles.Login__container}>
-				<img src={logo} alt="logo" className={styles.Login__logo} />
+				<Image src={logo} alt="logo" className={styles.Login__logo} />
 				<form action="/" className={styles.form} ref={form}>
 					<label htmlFor="email" className={styles.Login__label}>Email address</label>
 					<input type="text" name="email" placeholder="platzi@example.cm" className={`${styles.Login__input} ${styles['input-email']}`} />

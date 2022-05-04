@@ -1,4 +1,5 @@
 import { useState, useContext } from 'react';
+import Image from 'next/image';
 import AppContext from 'context/AppContext';
 import Menu from 'components/Menu';
 import MyOrder from 'containers/MyOrder';
@@ -20,9 +21,9 @@ const Header = () => {
 
   return (
     <header className={styles.Header}>
-      <img src={menuIcon} alt="menu" className={styles.menu} onClick={() => handleToggle(setToggleMenuMobile, toggleMenuMobile)} />
+      <Image src={menuIcon} alt="menu" className={styles.menu} onClick={() => handleToggle(setToggleMenuMobile, toggleMenuMobile)} />
       <div className={`${styles['navbar-left']} ${styles.Header__navbar}`}>
-        <img src={logo} alt="logo" className={styles.Header__logo} />
+        <Image src={logo} alt="logo" className={styles.Header__logo} />
         <ul className={styles.list}>
           <li>
             <a className={styles.list__item} href="/">All</a>
@@ -50,7 +51,7 @@ const Header = () => {
             platzi@example.com
           </li>
           <li className={styles['shopping-cart']} onClick={() => handleToggle(setToggleOrders, toggleOrders)}>
-            <img className={styles['shopping-cart__icon']} src={cartIcon} alt="shoping cart" />
+            <Image className={styles['shopping-cart__icon']} src={cartIcon} alt="shoping cart" />
             {cart.length > 0 && <div className={styles['shopping-cart__quantity']}>{cart.length}</div>}
           </li>
         </ul>

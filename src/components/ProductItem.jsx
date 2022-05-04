@@ -1,4 +1,5 @@
 import { useContext  } from 'react';
+import Image from 'next/image';
 import AppContext from 'context/AppContext';
 import removefromCartImage from '@icons/bt_added_to_cart.svg'
 import addToCartImage from '@icons/bt_add_to_cart.svg';
@@ -21,7 +22,7 @@ const ProductItem = ({ product }) => {
 
 	return (
 		<div className={styles.ProductItem}>
-			<img onClick={() => handleProduct(product)} className={styles.ProductItem__image} src={product.images[0]} alt={product.title} />
+			<Image onClick={() => handleProduct(product)} className={styles.ProductItem__image} src={product.images[0]} alt={product.title} />
 			<div className={styles.ProductItem__info}>
 				<div>
 					<p className={styles.ProductItem__price}>$ {product.price}</p>
@@ -29,8 +30,8 @@ const ProductItem = ({ product }) => {
 				</div>
 				<figure className={styles['ProductItem__add-to-cart']} onClick={() => handleCart(product)}>
 					{ isProductAdded()
-					? (	<img className={styles.ProduProductItem__icon} src={removefromCartImage} alt="" /> ) 
-					: ( <img className={styles.ProduProductItem__icon} src={addToCartImage} alt="" /> )
+					? (	<Image className={styles.ProduProductItem__icon} src={removefromCartImage} alt="" /> ) 
+					: ( <Image className={styles.ProduProductItem__icon} src={addToCartImage} alt="" /> )
 					}
 				</figure>
 			</div>
