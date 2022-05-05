@@ -1,7 +1,7 @@
 import { useContext  } from 'react';
 import Image from 'next/image';
 import AppContext from 'context/AppContext';
-import removefromCartImage from '@icons/bt_added_to_cart.svg'
+import removefromCartImage from '@icons/bt_added_to_cart.svg';
 import addToCartImage from '@icons/bt_add_to_cart.svg';
 import styles from 'styles/ProductItem.module.scss';
 
@@ -14,29 +14,39 @@ const ProductItem = ({ product }) => {
 
 	const handleCart = (item) => {
 		isProductAdded() ? removeFromCart(item.id) : addToCart(item);
-	}
+	};
 
 	const handleProduct = (item) => {
 		addProduct(item);
-	}
+	};
 
 	return (
 		<div className={styles.ProductItem}>
-			<Image onClick={() => handleProduct(product)} className={styles.ProductItem__image} src={product.images[0]} alt={product.title} />
+			<Image
+				className={styles.ProductItem__image}
+        src={product.images[0]}
+        alt={product.title}
+        width="240"
+        height="240"
+        layout="responsive"
+				onClick={() => handleProduct(product)}
+      />
 			<div className={styles.ProductItem__info}>
 				<div>
 					<p className={styles.ProductItem__price}>$ {product.price}</p>
 					<p className={styles.ProductItem__name}>{product.title}</p>
 				</div>
-				<figure className={styles['ProductItem__add-to-cart']} onClick={() => handleCart(product)}>
+				<button className={styles['ProductItem__add-to-cart']} 
+				onClick={() => handleCart(product)}
+				>
 					{ isProductAdded()
-					? (	<Image className={styles.ProduProductItem__icon} src={removefromCartImage} alt="" /> ) 
-					: ( <Image className={styles.ProduProductItem__icon} src={addToCartImage} alt="" /> )
+					? (	<Image className={styles.ProductItem__icon} src={removefromCartImage} alt="" /> ) 
+					: ( <Image className={styles.ProductItem__icon} src={addToCartImage} alt="" /> )
 					}
-				</figure>
+				</button>
 			</div>
 		</div>
 	);
-}
+};
 
 export default ProductItem;

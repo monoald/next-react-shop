@@ -12,7 +12,7 @@ import Checkout from '@templates/Checkout';
 import Orders from '@templates/Orders';
 import AppContext from '@context/AppContext';
 import useInitialState from '@hooks/useInitialState';
-import styles from '@styles/global.module.css';
+import '@styles/global.module.css';
 
 const App = () => {
   const initialState = useInitialState();

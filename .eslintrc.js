@@ -7,13 +7,14 @@ module.exports = {
     es6: true,
   },
   extends: [
-    'eslint: recommended',
-    'plugin:jsx11y/recommended',
+    'eslint:recommended',
+    'plugin:jsx-a11y/recommended',
     'plugin:prettier/recommended',
     'next',
     'next/core-web-vitals'
   ],
   rules: {
     'semi': ['error', 'always'],
+    'prettier/prettier': 0,
   }
 }

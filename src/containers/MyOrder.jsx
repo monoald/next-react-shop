@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import flechita from '@icons/flechita.svg';
 import OrderItem from 'components/OrderItem';
 import AppContext from 'context/AppContext';
@@ -27,8 +27,8 @@ const MyOrder = () => {
 				</p>
 				<p className={styles.order__total}>$ {sumTotal(cart)}</p>
 			</div>
-			<Link to='/checkout' >
-				<button className={styles.primary-button}>
+			<Link href='/checkout' >
+				<button className={styles['primary-button']}>
 						Checkout
 				</button>
 			</Link>

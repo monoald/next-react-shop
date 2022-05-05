@@ -1,5 +1,7 @@
 import { useState, useContext } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import Image from 'next/image';
+import Link from 'next/link';
 import AppContext from 'context/AppContext';
 import Menu from 'components/Menu';
 import MyOrder from 'containers/MyOrder';
@@ -17,48 +19,72 @@ const Header = () => {
 
   const handleToggle = (func, obj) => {
     func(!obj);
-  }
+  };
 
   return (
     <header className={styles.Header}>
-      <Image src={menuIcon} alt="menu" className={styles.menu} onClick={() => handleToggle(setToggleMenuMobile, toggleMenuMobile)} />
+      <Image src={menuIcon} alt="menu" className={styles.menu} 
+      onClick={() => handleToggle(setToggleMenuMobile, toggleMenuMobile)} 
+      onKeyDown={() => handleToggle(setToggleMenuMobile, toggleMenuMobile)} 
+      />
       <div className={`${styles['navbar-left']} ${styles.Header__navbar}`}>
-        <Image src={logo} alt="logo" className={styles.Header__logo} />
+        <Link href="/">
+          <Image src={logo} alt="logo" className={styles.Header__logo} />
+        </Link>
         <ul className={styles.list}>
           <li>
-            <a className={styles.list__item} href="/">All</a>
+            <Link href="/" >
+            <span className={styles.list__item}>All</span>
+            </Link>
           </li>
           <li>
-            <a className={styles.list__item} href="/">Clothes</a>
+            <Link href="/" >
+            <span className={styles.list__item}>Clothes</span>
+            </Link>
           </li>
           <li>
-            <a className={styles.list__item} href="/">Electronics</a>
+            <Link href="/" >
+            <span className={styles.list__item}>Electronics</span>
+            </Link>
           </li>
           <li>
-            <a className={styles.list__item} href="/">Furnitures</a>
+            <Link href="/" >
+            <span className={styles.list__item}>Furnitures</span>
+            </Link>
           </li>
           <li>
-            <a className={styles.list__item} href="/">Toys</a>
+            <Link href="/" >
+            <span className={styles.list__item}>Toys</span>
+            </Link>
           </li>
           <li>
-            <a className={styles.list__item} href="/">Others</a>
+            <Link href="/" >
+            <span className={styles.list__item}>Others</span>
+            </Link>
           </li>
         </ul>
       </div>
       <div className={`styles['navbar-right'] ${styles.Header__navbar}`}>
         <ul className={styles.list}>
-          <li className={styles.list__email} onClick={() => handleToggle(setToggle, toggle)}>
-            platzi@example.com
+          <li className={styles.list__email}>
+            <textbox 
+            onClick={() => handleToggle(setToggle, toggle)}
+            onKeyDown={() => handleToggle(setToggle, toggle)}>
+              platzi@example.com
+            </textbox>
           </li>
-          <li className={styles['shopping-cart']} onClick={() => handleToggle(setToggleOrders, toggleOrders)}>
-            <Image className={styles['shopping-cart__icon']} src={cartIcon} alt="shoping cart" />
+          <li className={styles['shopping-cart']}>
+            <Image className={styles['shopping-cart__icon']} 
+            src={cartIcon} alt="shoping cart"
+            onClick={() => handleToggle(setToggleOrders, toggleOrders)}
+            onKeyDown={() => handleToggle(setToggleOrders, toggleOrders)} />
             {cart.length > 0 && <div className={styles['shopping-cart__quantity']}>{cart.length}</div>}
           </li>
         </ul>
       </div>
-      {toggle && <Menu />}
-      {toggleOrders && <MyOrder />}
-      { toggleMenuMobile && <MenuMobile /> }
+      {toggle && <BrowserRouter >  <Menu /> </BrowserRouter>}
+      {toggleOrders && <BrowserRouter >  <MyOrder /> </BrowserRouter>}
+      { toggleMenuMobile && <BrowserRouter > <MenuMobile /> </BrowserRouter>  }
     </header>
   );
 };
