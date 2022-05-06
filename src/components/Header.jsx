@@ -14,8 +14,9 @@ import styles from 'styles/Header.module.scss';
 const Header = () => {
   const [toggle, setToggle] = useState(false);
   const [toggleOrders, setToggleOrders] = useState(false);
-  const [toggleMenuMobile, setToggleMenuMobile] = useState(false);
   const { state: {cart} } = useContext(AppContext);
+  const { state: {mobileMenu} } = useContext(AppContext);
+  const { showMobileMenu } = useContext(AppContext);
 
   const handleToggle = (func, obj) => {
     func(!obj);
@@ -23,9 +24,9 @@ const Header = () => {
 
   return (
     <header className={styles.Header}>
-      <Image src={menuIcon} alt="menu" className={styles.menu} 
-      onClick={() => handleToggle(setToggleMenuMobile, toggleMenuMobile)} 
-      onKeyDown={() => handleToggle(setToggleMenuMobile, toggleMenuMobile)} 
+      <img src={menuIcon.src} alt="menu" className={styles.menu} 
+      onClick={showMobileMenu} 
+      onKeyDown={showMobileMenu} 
       />
       <div className={`${styles['navbar-left']} ${styles.Header__navbar}`}>
         <Link href="/">
@@ -64,7 +65,7 @@ const Header = () => {
           </li>
         </ul>
       </div>
-      <div className={`styles['navbar-right'] ${styles.Header__navbar}`}>
+      <div className={`${styles['navbar-right']} ${styles.Header__navbar}`}>
         <ul className={styles.list}>
           <li className={styles.list__email}>
             <textbox 
@@ -84,7 +85,7 @@ const Header = () => {
       </div>
       {toggle && <BrowserRouter >  <Menu /> </BrowserRouter>}
       {toggleOrders && <BrowserRouter >  <MyOrder /> </BrowserRouter>}
-      { toggleMenuMobile && <BrowserRouter > <MenuMobile /> </BrowserRouter>  }
+      { mobileMenu && <BrowserRouter > <MenuMobile /> </BrowserRouter>  }
     </header>
   );
 };

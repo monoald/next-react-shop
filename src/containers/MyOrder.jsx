@@ -13,7 +13,7 @@ const MyOrder = () => {
 	return (
 		<aside className={styles.MyOrder}>
 			<div className={styles['MyOrder__title-container']}>
-				<Image className={styles.MyOrder__close} src={flechita} alt="arrow" />
+				<img className={styles.MyOrder__close} src={flechita.src} alt="arrow" />
 				<p className={styles.title}>My order</p>
 			</div>
 			<div className={styles.MyOrder__content}>

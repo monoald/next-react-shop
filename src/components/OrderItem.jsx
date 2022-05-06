@@ -14,9 +14,8 @@ const OrderItem = ( props ) => {
 
 	return (
 		<div className={styles.OrderItem}>
-			<figure className={styles['OrderItem__Image-container']}>
-				<Image 
-				className={styles.OrderItem__icon} 
+			<figure className={styles['OrderItem__img-container']}>
+				<img className={styles.OrderItem__icon} 
 				src={product.images[0]} 
 				alt={product.title} 
 				width="100%"

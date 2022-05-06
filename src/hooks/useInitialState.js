@@ -3,6 +3,7 @@ import { useState } from "react";
 const initialState = {
   cart: [],
   actualProduct: false,
+  mobileMenu: false,
 };
 const useInitialState = () => {
   const [state, setState] = useState(initialState);
@@ -42,12 +43,28 @@ const useInitialState = () => {
     });
   };
 
+  const showMobileMenu = () => { 
+    setState({
+      ...state,
+      mobileMenu: true,
+    });
+  };
+
+  const hideMobileMenu = () => { 
+    setState({
+      ...state,
+      mobileMenu: false,
+    });
+  };
+
   return {
     state,
     addToCart,
     removeFromCart,
     addProduct,
     removeProduct,
+    showMobileMenu,
+    hideMobileMenu,
   };
 };
 

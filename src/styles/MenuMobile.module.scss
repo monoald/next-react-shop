@@ -31,11 +31,12 @@
   font-size: $sm;
   font-weight: 300;
 }
-.sign-out{
+.MobileMenu .sign-out{
   color: $hospital-green;
 }
 .MobileMenu .list__item {
   margin-bottom: 24px;
+  cursor: pointer;
 }
 
 .MobileMenu__close {

@@ -11,6 +11,7 @@
   position: sticky;
   top: 0;
   background-color: white;
+  z-index: 1;
 }
 .Header__logo {
   width: 150px;
@@ -19,6 +20,7 @@
   height: 100%;
 }
 .Header__navbar .list{
+  width: 100%;
   list-style: none;
   display: flex;
   align-items: center;
@@ -49,6 +51,7 @@
 //------------NAVBAR-RIGTH-----------
 .navbar-right {
   width: 200px;
+  display: flex;
 }
 .navbar-right .list{
   display: flex;

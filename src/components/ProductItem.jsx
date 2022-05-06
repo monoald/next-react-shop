@@ -13,6 +13,7 @@ const ProductItem = ({ product }) => {
 	const isProductAdded = () => cart.some( (item) => item.id == product.id) ? true : false;
 
 	const handleCart = (item) => {
+		console.log(item);
 		isProductAdded() ? removeFromCart(item.id) : addToCart(item);
 	};
 
@@ -40,8 +41,8 @@ const ProductItem = ({ product }) => {
 				onClick={() => handleCart(product)}
 				>
 					{ isProductAdded()
-					? (	<Image className={styles.ProductItem__icon} src={removefromCartImage} alt="" /> ) 
-					: ( <Image className={styles.ProductItem__icon} src={addToCartImage} alt="" /> )
+					? (	<Image className={styles.ProductItem__icon} src={removefromCartImage} alt={product.title} /> ) 
+					: ( <Image className={styles.ProductItem__icon} src={addToCartImage} alt={product.title} /> )
 					}
 				</button>
 			</div>
