@@ -12,19 +12,21 @@ const ProductInfo = ({ product }) => {
 	return (
 		<section className={styles.ProductInfo}>
 			<div className={styles.ProductInfo__container}>
+				<div>
+					<Image className={styles.ProductInfo__image}
+					src={product.images[0]}
+					alt={product.title}
+					width="380"
+					height="380"
+					layout="responsive"
+					/>
+				</div>
 				<div className={styles.ProductInfo__close}>
 					<Image className={styles.ProductInfo__icon} 
 					src={closeIcon} alt="close product" 
 					onClick={removeProduct} 
 					/>
 				</div>
-				<Image className={styles.ProductInfo__image}
-				src={product.images[0]}
-				alt={product.title}
-				width="240"
-        height="240"
-        layout="responsive"
-				/>
 				<div className={styles.ProductInfo__text}>
 					<p className={styles.ProductInfo__price}>$ {product.price}</p>
 					<p className={styles.ProductInfo__name}>{product.title}</p>
