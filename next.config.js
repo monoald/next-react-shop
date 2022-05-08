@@ -14,6 +14,13 @@ module.exports = withPWA({
   },
   reactStrictMode: true,
   images: {
-    domains: ["placeimg.com", "api.lorem.space", "store.storeimages.cdn-apple.com"],
+    domains: [
+    "placeimg.com", 
+    "api.lorem.space", 
+    "store.storeimages.cdn-apple.com", 
+    "w7.pngwing.com", 
+    "http2.mlstatic.com",
+    "encrypted-tbn0.gstatic.com", 
+  ],
   },
 });
