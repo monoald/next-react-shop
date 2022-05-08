@@ -24,10 +24,13 @@ const Header = () => {
 
   return (
     <header className={styles.Header}>
-      <img src={menuIcon.src} alt="menu" className={styles.menu} 
+      <button className={styles['menu-icon-container']}
       onClick={showMobileMenu} 
       onKeyDown={showMobileMenu} 
+      >
+      <img src={menuIcon.src} alt="menu" className={styles.menu} 
       />
+      </button>
       <div className={`${styles['navbar-left']} ${styles.Header__navbar}`}>
         <Link href="/">
           <Image src={logo} alt="logo" className={styles.Header__logo} />
