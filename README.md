@@ -29,7 +29,7 @@ Project [React-Shop](https://github.com/monoald/react-shop) migrated to [Next.js
 </p>
 
 ## Project View
-Store main section, cart and checkout.
+Store main section, cart and checkout. You can see the full project deployed [here](https://next-react-shop.vercel.app/).
 ![Shop main page](https://github.com/monoald/react-shop/blob/main/src/assets/images/shop-main.png?raw=true)
 ![Shop cart](https://github.com/monoald/react-shop/blob/main/src/assets/images/shop-cart.png?raw=true)
 ![Shop checkout](https://github.com/monoald/react-shop/blob/main/src/assets/images/shop-checkout.png?raw=true)
